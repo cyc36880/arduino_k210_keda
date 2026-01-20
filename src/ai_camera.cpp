@@ -476,7 +476,7 @@ uint8_t AiCamera::get_aiXiaoZhi_state(uint8_t &state)
 {
     uint8_t ret=0;
     uint8_t target_base_addr = get_register_addr(AI_CAMERA_AI_XIAOZHI, 0);
-    ret += this->readReg(this->DEV_ADDR, target_base_addr, &brightness, 1);
+    ret += this->readReg(this->DEV_ADDR, target_base_addr, &state, 1);
     return ret;
 }
 
@@ -491,4 +491,3 @@ uint8_t AiCamera::get_aiXiaoZhi_run_state(uint8_t &command, uint8_t &speed)
     return ret;
 }
 
-#endif
